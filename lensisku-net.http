@@ -1,0 +1,10 @@
+// This file is an HTTP Request file, often used with IDE extensions like REST Client (VS Code)
+// or Rider's built-in HTTP client. It allows you to define and send HTTP requests directly from your editor.
+
+// Defines a variable for the host address of the API.
+@lensisku_net_HostAddress = http://localhost:5106
+
+GET {{lensisku_net_HostAddress}}/weatherforecast/
+Accept: application/json
+// This is an example GET request to the /weatherforecast endpoint.
+###
