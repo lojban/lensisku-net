@@ -1,0 +1,38 @@
+<!-- This is the project file for the lensisku-net application. It's an XML file that defines project settings, -->
+<!-- dependencies, and how the project is built. It uses the MSBuild format. -->
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!-- PropertyGroup contains project-level properties. -->
+  <PropertyGroup>
+    <!-- TargetFramework specifies the .NET version the project targets (e.g., .NET 9.0). -->
+    <TargetFramework>net9.0</TargetFramework>
+    <!-- Nullable enables C# nullable reference types, helping to prevent null reference exceptions. -->
+    <Nullable>enable</Nullable>
+    <!-- ImplicitUsings enables a set of default 'using' directives based on the project type, reducing boilerplate. -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- RootNamespace defines the default namespace for the project. -->
+    <RootNamespace>lensisku_net</RootNamespace>
+  </PropertyGroup>
+
+  <!-- ItemGroup contains lists of items, such as package references (NuGet packages). -->
+  <ItemGroup>
+    <!-- PackageReference includes a NuGet package as a dependency. -->
+    <!-- BCrypt.Net-Next is used for password hashing. -->
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <!-- DotNetEnv is used to load environment variables from .env files. -->
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <!-- Microsoft.AspNetCore.Authentication.JwtBearer provides JWT (JSON Web Token) authentication middleware. -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.4" />
+    <!-- Microsoft.AspNetCore.OpenApi is used for OpenAPI (Swagger) integration for API documentation. -->
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.4" />
+    <!-- Npgsql.EntityFrameworkCore.PostgreSQL is the Entity Framework Core provider for PostgreSQL databases. -->
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <!-- Swashbuckle.AspNetCore provides tools for generating Swagger/OpenAPI documentation from API controllers. -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
+    <!-- OpenTelemetry packages for logging and metrics -->
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.12.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.12.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.12.0" />
+  </ItemGroup>
+
+</Project>
